@@ -10,10 +10,10 @@ Exposes ZwMapViewOfSection ioctl for mapping/unmapping arbitrary physical memory
 
 ```cpp
 
-	uintptr_t GetSystemCR3(); <br> 
+	uintptr_t GetSystemCR3(); 
     // two ways: walk physical pages for the 0xa0 magic or by leaking eprocess->dtb field superfetch translate and read physical address directly
   
-	uintptr_t GetProcessCr3(const wchar_t* ProcessName); <br> 
+	uintptr_t GetProcessCr3(const wchar_t* ProcessName); 
     // leak eprocess->dtb from usermode; superfetch translate and read physical address directly
   
 	uintptr_t MapPhysical(_In_ ULONG_PTR PhysicalAddress, _In_ ULONG NumberOfBytes, _Inout_ HANDLE* SectionHandle, _Inout_ PVOID* Object);
@@ -22,10 +22,10 @@ Exposes ZwMapViewOfSection ioctl for mapping/unmapping arbitrary physical memory
 	bool ReadPhysicalMemory(uintptr_t physical_address, void* output, unsigned long size);
 	bool WritePhysicalMemory(uintptr_t physical_address, void* data, unsigned long size);
 
-	BOOL SwitchSystemContext(); <br> 
+	BOOL SwitchSystemContext();
     // wrapper pretty much, to switch cr3 for virtual read contexts to the system cr3
 
-	BOOL SwitchProcessContext(const wchar_t* ProcessName); <br> 
+	BOOL SwitchProcessContext(const wchar_t* ProcessName); 
     // wrapper pretty much, to switch cr3 for virtual read contexts to any process by name easily
 
 	UINT64 TranslateLinearAddress(_In_ UINT64 VirtualAddress);
