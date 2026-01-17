@@ -5,10 +5,6 @@
 Don't really remember where i grabbed this driver from, but it was a BIOS flashing tool by Asus iirc.<br>
 Exposes ZwMapViewOfSection ioctl for mapping/unmapping arbitrary physical memory to usermode.
 
-Was used in my other project recently: 
-
-- [BusterCall](https://github.com/zer0condition/BusterCall) "Bypassing" HVCI via donor PFN swaps to modify read-only code pages. Call chained kernel functions (kCET and SLAT support), modify read-only code pages, and more.
-
 
 ## Features
 
@@ -37,3 +33,9 @@ Was used in my other project recently:
 	bool WriteVirtualMemory(PVOID Source, PVOID Buffer, ULONG Size);
   ```
 ---
+
+
+## Self Plug 
+Was used in my other project recently: 
+- [BusterCall](https://github.com/zer0condition/BusterCall) "Bypassing" HVCI via donor PFN swaps to modify read-only code pages. Call chained kernel functions (kCET and SLAT support), modify read-only code pages, and more.
+
