@@ -37,5 +37,5 @@ Exposes ZwMapViewOfSection ioctl for mapping/unmapping arbitrary physical memory
 
 ## Self Plug 
 Was used in my other project recently: 
-- [BusterCall](https://github.com/zer0condition/BusterCall) "Bypassing" HVCI via donor PFN swaps to modify read-only code pages. Call chained kernel functions (kCET and SLAT support), modify read-only code pages, and more.
+- [BusterCall](https://github.com/zer0condition/BusterCall) - "Bypassing" HVCI via donor PFN swaps to modify read-only code pages. Call chained kernel functions (kCET and SLAT support), modify read-only code pages, and more.
 
